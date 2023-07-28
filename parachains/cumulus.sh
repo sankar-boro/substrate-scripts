@@ -1,4 +1,4 @@
-genesis-node \
+polkadot-parachain \
 --collator \
 --force-authoring \
 --base-path ~/.data/para_chain_1__data \
@@ -14,7 +14,7 @@ genesis-node \
 --rpc-port 9006 \
 &> ~/.data/para_chain_1.log &
 
-genesis-node \
+polkadot-parachain \
 --collator \
 --force-authoring \
 --base-path ~/.data/para_chain_2__data \
@@ -34,7 +34,7 @@ genesis-node \
 # =======================================================================================================================
 # Alice and Bob keys
 
-genesis-node \
+polkadot-parachain \
 --alice \
 --collator \
 --force-authoring \
@@ -45,12 +45,12 @@ genesis-node \
 --node-key 0000000000000000000000000000000000000000000000000000000000000004 \
 -- \
 --execution wasm \
---chain ~/files/humidefi/rococo-local.json \
+--chain ~/files/rococo/rococo-raw-local-chainspec.json \
 --port 30005 \
 --rpc-port 9006 \
 &> ~/.data/para_chain_1.log &
 
-genesis-node \
+polkadot-parachain \
 --bob \
 --collator \
 --force-authoring \
@@ -59,7 +59,6 @@ genesis-node \
 --port 30006 \
 --rpc-port 9008 \
 --node-key 0000000000000000000000000000000000000000000000000000000000000005 \
---bootnodes /ip4/127.0.0.1/tcp/30001/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp \
 -- \
 --execution wasm \
 --chain ~/files/rococo/rococo-raw-local-chainspec.json \
