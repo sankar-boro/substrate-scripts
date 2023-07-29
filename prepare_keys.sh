@@ -12,6 +12,7 @@ fi
 # 2=stash/controller/babe
 
 generate_account_id() {
+	echo $3 $4
 	subkey inspect ${3:-} ${4:-} "$SECRET//$1//$2" | grep "Account ID" | awk '{ print $3 }'
 }
 

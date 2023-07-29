@@ -27,9 +27,14 @@ insert() {
 
 # insert aura //Alice 0xljdflsk 9999
 generate_address() {
-    res=$(subkey inspect $1)
-    dd=($(printf "$res" | grep "Public" | awk '{ print $4 }'))
-	printf ${dd[1]}
+    address=(gran babe imon para asgn audi beef)
+    count
+    for i in ${address[@]}; do
+        res=$(subkey inspect $1)
+        dd=($(printf "$res" | grep "Public key (hex):" | awk '{ print $4 }'))
+        ff=${dd[0]}
+        insert aura $1 $ff
+    done
 }
 
 generate_address //Alice
