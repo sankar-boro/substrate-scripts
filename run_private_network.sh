@@ -6,7 +6,7 @@ set -e
 # ./kill_program.sh genesis-n
 # rm -rf ~/.data/*
 
-polkadot \
+polkadot_10 \
 --alice \
 --validator \
 --base-path ~/.data/relay_chain_1__data \
@@ -16,7 +16,7 @@ polkadot \
 --node-key 0000000000000000000000000000000000000000000000000000000000000001 \
 &> ~/.data/relay_chain_1.log &
 
-polkadot \
+polkadot_10 \
 --bob \
 --validator \
 --base-path ~/.data/relay_chain_2__data \

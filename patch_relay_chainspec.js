@@ -23,7 +23,7 @@ function keystore() {
     return {
         get(n) {
             return [
-                getSr(`${n}//stash`),
+                getSr(`${n}`),
                 getSr(`${n}`),
                 {
                     grandpa: getEd(`${n}`),
