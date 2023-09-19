@@ -39,7 +39,8 @@ async function generateAddress() {
 
 function sendCurlRequest(name, suri, publicHexKey) {
   const d = `{ "jsonrpc":"2.0", "method":"author_insertKey", "params":["${name}", "${suri}", "${publicHexKey}"],"id":1 }`;
-  const x = spawn('curl', ['-H', 'Content-Type: application/json', '--data', d, 'http://localhost:9004']);
+  // console.log('d', d)
+  const x = spawn('curl', ['-H', 'Content-Type: application/json', '--data', d, 'http://localhost:8000']);
     x.stdout.on('data', (data) => {
         console.log(`${data}`);
     });
